@@ -1,11 +1,14 @@
 import { useState } from "react"
 import Button from "../components/Button"
 import Input from "../components/Input"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { api } from "../api/api"
 
 const SignUp = () => {
     const [error, setError] = useState("")
+    const navigate = useNavigate()
+    const { setSession } = useUserStore()
+
 
     const handleSubmit = async (e) => {
         e.preventDefault()

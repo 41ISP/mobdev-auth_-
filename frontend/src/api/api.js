@@ -11,8 +11,8 @@ const apiInstance = axios.create({
 
 
 const registerUser = async (user) => {
-const res = await apiInstance.post("/auth/register", user)
-return res
+    const res = await apiInstance.post("/auth/register", user)
+    return res
 }
 
 const loginUser = async (user) => {
@@ -21,5 +21,7 @@ const loginUser = async (user) => {
 }
 export const api = {
     registerUser,
-    loginUser
+    loginUser,
+    getMessages,
+    sendMessage
 }
